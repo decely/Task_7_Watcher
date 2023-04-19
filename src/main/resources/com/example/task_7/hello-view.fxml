@@ -1,16 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.task_7.HelloController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-  </padding>
-
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<BorderPane prefHeight="400" prefWidth="700" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.task_7.HelloController">
+   <left>
+      <VBox fx:id="box" alignment="CENTER" prefHeight="400.0" prefWidth="219.0" spacing="20.0" BorderPane.alignment="CENTER">
+          <padding>
+              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+          </padding>
+          <Button onAction="#onHelloButtonClickStart" text="Start" />
+          <Button layoutX="203.0" layoutY="178.0" onAction="#onHelloButtonClickStop" text="Stop" />
+      </VBox>
+   </left>
+   <right>
+      <VBox fx:id="box3" alignment="CENTER" prefHeight="400.0" prefWidth="235.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#LoopStart" text="Start" />
+            <Button mnemonicParsing="false" onAction="#LoopEnd" text="Stop" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding></VBox>
+   </right>
+   <center>
+      <VBox fx:id="box2" alignment="CENTER" prefHeight="400.0" prefWidth="372.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handle" text="Start" />
+            <Button mnemonicParsing="false" onAction="#onStop" text="Stop" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </center>
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#OnServStart" text="ServerStart" />
+            <Button mnemonicParsing="false" onAction="#OnServStop" text="ServerStop" />
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

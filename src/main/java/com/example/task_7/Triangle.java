@@ -1,2 +1,24 @@
-package com.example.task_7;public class Triangle {
+package com.example.task_7;
+
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Color;
+
+public class Triangle extends Shape{
+    @Override
+    double area() {
+        return 0;
+    }
+
+    public Triangle(double x, double y, Color color) {
+        super(x, y, color);
+    }
+
+    @Override
+    void draw(GraphicsContext gr) {
+        gr.setStroke(color);
+        gr.setFill(color);
+        gr.setLineWidth(1);
+        gr.strokePolygon(new double[]{x, x-3, x+3, 4, 3.5}, new double[]{y-10, y, y}, 3);
+        gr.fillPolygon(new double[]{x, x-3, x+3, 4, 3.5}, new double[]{y-10, y, y}, 3);
+    }
 }

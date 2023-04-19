@@ -1,2 +1,5 @@
-package com.example.task_7;public class Aggregate {
+package com.example.task_7;
+
+public interface Aggregate {
+    public Iterator getIterator();
 }
